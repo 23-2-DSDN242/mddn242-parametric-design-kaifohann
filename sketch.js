@@ -13,28 +13,45 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 80,
+
   "offsetx": 0,
-  "offsety": 35
+  "offsety": -30,
+  "arcX": 0,
+  "arcY": 115,
+  "arcW": 120,
+  "arcH": 190,
+  "arcStart": 180,
+  "arcStop": 0
 }
 
 const letterB = {
-  "size": 150,
+ 
   "offsetx": 0,
-  "offsety": -145
+  "offsety": 45,
+  "arcX": 110,
+  "arcY": -130,
+  "arcW": 300,
+  "arcH": 300,
+  "arcStart": 90,
+  "arcStop": 180
 }
 
 const letterC = {
-  "size": 100,
-  "offsetx": 30,
-  "offsety": 0
+
+  "offsetx": 40,
+  "offsety": 0,
+  "arcX": 90,
+  "arcY": 0,
+  "arcW": 150,
+  "arcH": 150,
+  "arcStart": 0,
+  "arcStop": 360
 }
 
-const backgroundColor  = "#caf0f8";
-const strokeColor      = "#03045e";
+const backgroundColor  = "#b8ffc3";
 
-const darkBlue  = "#0077b6";
-const lightBlue  = "#90e0ef";
+const MainColour  = "#63db75";
+const blockedColour  = "#b8ffc3";
 
 function setup () {
   // create the drawing canvas, save the canvas element
@@ -42,8 +59,7 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
+  noStroke();
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -65,15 +81,19 @@ function draw () {
 
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
-  let size2 = letterData["size"];
+  //let size2 = letterData["size"];
   let pos2x = posx + letterData["offsetx"];
-  let pos2y = posy + letterData["offsety"];
+  let pos2y = posy + letterData["offsety"]; 
+  let pos3x = posx + letterData["arcX"];
+  let pos3y = posy + letterData["arcY"];
 
+  rectMode(CENTER);
   // draw two circles
-  fill(darkBlue);
-  ellipse(posx, posy, 150, 150);
-  fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+  fill(MainColour);
+  rect(posx, posy, 200, 200, 30);
+  fill(blockedColour);
+  ellipse(pos2x, pos2y, 30, 30);
+  arc(pos3x, pos3y, letterData["arcW"],letterData["arcH"], radians(letterData["arcStart"]), radians(letterData["arcStop"]) )
 }
 
 function keyTyped() {
