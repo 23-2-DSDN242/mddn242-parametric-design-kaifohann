@@ -1,12 +1,12 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#caf0f8";
+var systemBackgroundColor = "#b8ffc3";
 var systemLineColor = "#000090";
-var systemBoxColor = "#00c800";
+var systemBoxColor = "#999999";
 
 /* internal constants */
-const darkBlue  = "#0077b6";
-const lightBlue  = "#90e0ef";
-const strokeColor  = "#03045e";
+const MainColour  = "#63db75";
+const blockedColour  = "#b8ffc3";
+
 
 /*
  * Draw the letter given the letterData
@@ -17,19 +17,25 @@ const strokeColor  = "#03045e";
  */
 function drawLetter(letterData) {
   // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
-
+  push();
+ // noStroke();
+  let boxCenterX = 50;
+  let boxCenterY = 100;
+  
   // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
+  let pos2x = boxCenterX + letterData["offsetx"];
+  let pos2y = boxCenterY + letterData["offsety"]; 
+  let pos3x = boxCenterX + letterData["arcX"];
+  let pos3y = boxCenterY + letterData["arcY"];
 
-  // draw two circles
-  fill(darkBlue);
-  ellipse(50, 150, 75, 75);
-  fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+  rectMode(CENTER);
+   // draw two circles
+  fill(MainColour);
+  rect(boxCenterX,boxCenterY, 100, 100, 30);
+  fill(blockedColour);
+  ellipse(pos2x, pos2y, 20, 20);
+  arc(pos3x, pos3y, letterData["arcW"],letterData["arcH"], radians(letterData["arcStart"]), radians(letterData["arcStop"]) )
+  pop();
 }
 
 function interpolate_letter(percent, oldObj, newObj) {

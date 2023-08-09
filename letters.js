@@ -1,23 +1,43 @@
 const alphabet = {
   "default": {
-    "size": 40,
     "offsetx": 0,
-    "offsety": 0
+    "offsety": -30,
+    "arcX": 0,
+    "arcY": 115,
+    "arcW": 120,
+    "arcH": 190,
+    "arcStart": 180,
+    "arcStop": 0
   },
   "A": {
-    "size": 40,
     "offsetx": 0,
-    "offsety": 17
+    "offsety": -10,
+    "arcX": 0,
+    "arcY": 65,
+    "arcW": 85,
+    "arcH": 100,
+    "arcStart": 180,
+    "arcStop": 0
   },
   "B": {
-    "size": 75,
     "offsetx": 0,
-    "offsety": -70
+    "offsety": 20,
+    "arcX": 51,
+    "arcY": -55,
+    "arcW": 120,
+    "arcH": 120,
+    "arcStart": 90,
+    "arcStop": 180
   },
   "C": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "offsetx": 40,
+    "offsety": 0,
+    "arcX": 50,
+    "arcY": 0,
+    "arcW": 95,
+    "arcH": 75,
+    "arcStart": 90,
+    "arcStop": 270
   },
   "D": {
     "size": 50,

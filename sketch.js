@@ -49,7 +49,6 @@ const letterC = {
 }
 
 const backgroundColor  = "#b8ffc3";
-
 const MainColour  = "#63db75";
 const blockedColour  = "#b8ffc3";
 
