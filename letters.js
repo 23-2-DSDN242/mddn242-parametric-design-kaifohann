@@ -7,7 +7,7 @@ const alphabet = {
     "arcW": 120,
     "arcH": 190,
     "arcStart": 180,
-    "arcStop": 0
+    "arcStop": 0,
   },
   "A": {
     "offsetx": 0,
@@ -40,9 +40,14 @@ const alphabet = {
     "arcStop": 270
   },
   "D": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "offsetx": 40,
+    "offsety": 0,
+    "arcX": 50,
+    "arcY": 0,
+    "arcW": 95,
+    "arcH": 75,
+    "arcStart": 90,
+    "arcStop": 270
   },
   "E": {
     "size": 50,
