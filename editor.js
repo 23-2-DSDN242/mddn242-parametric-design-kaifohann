@@ -7,8 +7,11 @@
 const sliderInfo = [
   ["offsetx",  -100,  100],
   ["offsety", -100, 100],
-  ["arcX:", -50, 50],
-  ["arcY", -100, 100],
+
+  ["testx:", 0, 50],
+  ["testy", 0, 100],
+
+
   ["arcW", 100, 200],
   ["arcH", 100, 200],
   ["arcStart", 0, 360],
