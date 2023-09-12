@@ -25,7 +25,10 @@ function drawLetter(letterData) {
   //noStroke();
   stroke("#b8ffc3");
   strokeWeight(0.5)
-  let boxCenterX = 50;
+
+  let boxCenterX = letterData["boxCenterX"];
+  
+ // let boxCenterX = 50;
   let boxCenterY = 100;
   
   // determine parameters for  circle
@@ -115,14 +118,36 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rectSize"] = map(percent, 0, 100, oldObj["rectSize"], newObj["rectSize"]);
   new_letter["CornerRounds"] = map(percent, 0, 100, oldObj["CornerRounds"], newObj["CornerRounds"]);
 
-
   new_letter["arcX"] = map(percent, 0, 100, oldObj["arcX"], newObj["arcX"]);
   new_letter["arcY"] = map(percent, 0, 100, oldObj["arcY"], newObj["arcY"]);
-  new_letter["arcW"] = map(percent, 0, 100, oldObj["arcW"], newObj["arcW"]);
-  new_letter["arcH"] = map(percent, 0, 100, oldObj["arcH"], newObj["arcH"]);
-  new_letter["arcStart"] = map(percent, 0, 100, oldObj["arcStart"], newObj["arcStart"]);
-  new_letter["arcStop"] = map(percent, 0, 100, oldObj["arcStop"], newObj["arcStop"]);
-  
+  //new_letter["arcW"] = map(percent, 0, 100, oldObj["arcW"], newObj["arcW"]);
+  //new_letter["arcH"] = map(percent, 0, 100, oldObj["arcH"], newObj["arcH"]);
+  //new_letter["arcStart"] = map(percent, 0, 100, oldObj["arcStart"], newObj["arcStart"]);
+  //new_letter["arcStop"] = map(percent, 0, 100, oldObj["arcStop"], newObj["arcStop"]);
+
+  //new_letter["boxCenterX"] = map(percent, 0, 100, oldObj["boxCenterX"], newObj["boxCenterX"]);
+
+  if (percent < 50) {
+    new_letter["boxCenterX"] = map(percent, 0, 49, oldObj["boxCenterX"], 150);
+    new_letter["arcW"] = map(percent, 0, 49, oldObj["arcW"], 0);
+    new_letter["arcH"] = map(percent, 0, 49, oldObj["arcH"], 0);
+    new_letter["arcStart"] = map(percent, 0, 49, oldObj["arcStart"], 360);
+    new_letter["arcStop"] = map(percent, 0, 49, oldObj["arcStop"], 360);
+
+  } else {
+    new_letter["boxCenterX"] = map(percent, 50, 100, 150, newObj["boxCenterX"]);
+    new_letter["arcW"] = map(percent, 50, 100, 0, newObj["arcW"]);
+    new_letter["arcH"] = map(percent, 50, 100, 0, newObj["arcH"]);
+    new_letter["arcStart"] = map(percent, 50, 100, 360, newObj["arcStart"]);
+    new_letter["arcStop"] = map(percent, 50, 100, 360, newObj["arcStop"]);
+  }
+
+
+  //if (percent < 50) {
+  //  new_letter["boxCenterY"] = map(percent, 0, 49, oldObj["boxCenterY"], -20);
+  //} else {
+  //  new_letter["boxCenterY"] = map(percent, 50, 100, -20, newObj["boxCenterY"]);
+  //}
   
   //if (percent < 80) {
     //new_letter["arcStart"] = map(percent, 0, 79, oldObj["arcStart"],373);
@@ -141,7 +166,12 @@ function interpolate_letter(percent, oldObj, newObj) {
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  "DEFINITE",
+  "ABSOLUTE",
+  "COLORFUL",
+  "MOVEMENT",
+  "BOLDNESS",
+  "INFINITE",
+  "MINIMISE",
+  
 ]

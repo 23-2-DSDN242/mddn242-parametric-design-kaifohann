@@ -15,7 +15,9 @@ const sliderInfo = [
   ["arcStart", -1, 360],
   ["arcStop", 0, 360],
   ["rectSize", 10, 200],
-  ["CornerRounds", 0, 100]
+  ["CornerRounds", 0, 100],
+  ["boxCenterX", 0, 100],
+
 
 
 ];

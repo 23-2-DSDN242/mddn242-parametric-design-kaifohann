@@ -1,25 +1,19 @@
 const alphabet = {
   "default": {
-    "rectSize": 20,
+    "rectSize": 0,
     "offsetx": 0,
-    "offsety": -30,
+    "offsety": 0,
     "CornerRounds": 100,
-    "arcX": 0,
-    "arcY": 115,
-    "arcW": 120,
-    "arcH": 190,
-    "arcStart": 180,
-    "arcStop": 0,
+    "arcX": -2,
+    "arcY": 5,
+    "arcW": 130,
+    "arcH": 125,
+    "arcStart": 0,
+    "arcStop": 360,
+    "boxCenterX": 50
+   
   },
   "A": {
-    //"offsetx": 0,
-    //"offsety": -10,
-    //"arcX": 0,
-   // "arcY": 65,
-   // "arcW": 85,
-    //"arcH": 100,
-   // "arcStart": 180,
-    //"arcStop": 0
     "rectSize": 20,
     "offsetx": -7,
     "offsety": -20,
@@ -29,17 +23,11 @@ const alphabet = {
     "arcW": 85,
     "arcH": 100,
     "arcStart": 180,
-    "arcStop": 0
+    "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "B": {
-    //"offsetx": 0,
-    //"offsety": 20,
-    //"arcX": 51,
-   // "arcY": -55,
-    //"arcW": 120,
-    //"arcH": 120,
-    //"arcStart": 90,
-    //"arcStop": 180
     "rectSize": 20,
     "offsetx": -5,
     "offsety": 15,
@@ -49,17 +37,11 @@ const alphabet = {
     "arcW": 140,
     "arcH": 140,
     "arcStart": 90,
-    "arcStop": 180
+    "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "C": {
-    //"offsetx": 40,
-    //"offsety": 0,
-    //"arcX": 50,
-    //"arcY": 0,
-    //"arcW": 95,
-   // "arcH": 75,
-    //"arcStart": 90,
-    //"arcStop": 270
     "rectSize": 0,
     "offsetx": 40,
     "offsety": 0,
@@ -69,7 +51,9 @@ const alphabet = {
     "arcW": 105,
     "arcH": 75,
     "arcStart": 90,
-    "arcStop": 270
+    "arcStop": 270,
+    "boxCenterX": 50
+
   },
   "D": {
     "rectSize": 20,
@@ -81,7 +65,9 @@ const alphabet = {
     "arcW": 140,
     "arcH": 140,
     "arcStart": 0,
-    "arcStop": 90
+    "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "E": {
     "rectSize": 20,
@@ -94,6 +80,8 @@ const alphabet = {
     "arcH": 55,
     "arcStart": 90,
     "arcStop": 270,
+    "boxCenterX": 50
+
   },
   "F": {
     "rectSize": 20,
@@ -106,18 +94,10 @@ const alphabet = {
     "arcH": 105,
     "arcStart": 90,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "G": {
-   // "rectSize": 20,
-    //"offsetx": 0,
-    //"offsety": -18,
-    //"CornerRounds": 100,
-    //"arcX": -40,
-    //"arcY": 25,
-    //"arcW": 100,
-    //"arcH": 37,
-    //"arcStart": 180,
-    //"arcStop": 90,
     "rectSize": 20,
     "offsetx": -22,
     "offsety": -27,
@@ -128,6 +108,8 @@ const alphabet = {
     "arcH": 40,
     "arcStart": 270,
     "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "H": {
     "rectSize": 40,
@@ -140,6 +122,8 @@ const alphabet = {
     "arcH": 126,
     "arcStart": 180,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "I": {
     "rectSize": 105,
@@ -152,6 +136,8 @@ const alphabet = {
     "arcH": 105,
     "arcStart": 270,
     "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "J": {
     "rectSize": 85,
@@ -164,11 +150,13 @@ const alphabet = {
     "arcH": 0,
     "arcStart": 179,
     "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "K": {
     "rectSize": 30,
     "offsetx": -28,
-    "offsety": -62,
+    "offsety": -60,
     "CornerRounds": 14,//69
     "arcX": 60,
     "arcY": 10,
@@ -176,6 +164,8 @@ const alphabet = {
     "arcH": 70,
     "arcStart": 90,
     "arcStop": 270,
+    "boxCenterX": 50
+
   },
   "L": {
     "rectSize": 105,
@@ -188,6 +178,8 @@ const alphabet = {
     "arcH": 0,
     "arcStart": 179,
     "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "M": {
     "rectSize": 55,
@@ -200,6 +192,8 @@ const alphabet = {
     "arcH": 55,
     "arcStart": 0,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "N": {
     "rectSize": 31,
@@ -212,6 +206,8 @@ const alphabet = {
     "arcH": 82,
     "arcStart": 0,
     "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "O": {
     "rectSize": 20,
@@ -224,6 +220,8 @@ const alphabet = {
     "arcH": 105,
     "arcStart": 0,
     "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "P": {
     "rectSize": 90,
@@ -236,6 +234,8 @@ const alphabet = {
     "arcH": 20,
     "arcStart": 0,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "Q": {
     "rectSize": 90,
@@ -248,6 +248,8 @@ const alphabet = {
     "arcH": 20,
     "arcStart": 0,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "R": {
     "rectSize": 23,
@@ -260,6 +262,8 @@ const alphabet = {
     "arcH": 149,
     "arcStart": 180,
     "arcStop": 23,
+    "boxCenterX": 50
+
   },
   "S": {
     "rectSize": 27,
@@ -272,6 +276,8 @@ const alphabet = {
     "arcH": 38,
     "arcStart": 270,
     "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "T": {
     "rectSize": 100,
@@ -284,6 +290,8 @@ const alphabet = {
     "arcH": 100,
     "arcStart": 270,
     "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "U": {
     "rectSize": 70,
@@ -296,6 +304,8 @@ const alphabet = {
     "arcH": 100,
     "arcStart": 0,
     "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "V": {
     "rectSize": 0,
@@ -308,6 +318,8 @@ const alphabet = {
     "arcH": 200,
     "arcStart": 0,
     "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "W": {
     "rectSize": 55,
@@ -320,6 +332,8 @@ const alphabet = {
     "arcH": 55,
     "arcStart": 0,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "X": {
     "rectSize": 40,
@@ -332,6 +346,8 @@ const alphabet = {
     "arcH": 40,
     "arcStart": 0,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "Y": {
     "rectSize": 40,
@@ -344,6 +360,8 @@ const alphabet = {
     "arcH": 154,
     "arcStart": 270,
     "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "Z": {
     "rectSize": 27,
@@ -356,6 +374,8 @@ const alphabet = {
     "arcH": 38,
     "arcStart": 270,
     "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "0": {
     "rectSize": 50,
@@ -368,6 +388,8 @@ const alphabet = {
     "arcH": 0,
     "arcStart": 0,
     "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "1": {
     "rectSize": 90,
@@ -380,6 +402,8 @@ const alphabet = {
     "arcH": 99,
     "arcStart": 0,
     "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "2": {
     "rectSize": 50,
@@ -392,6 +416,8 @@ const alphabet = {
     "arcH": 151,
     "arcStart": 324,
     "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "3": {
     "rectSize": 57,
@@ -400,40 +426,96 @@ const alphabet = {
     "CornerRounds": 100,//69
     "arcX": -4,
     "arcY": -24,
-    "arcW": 132,
+    "arcW": 125,
     "arcH": 105,
     "arcStart": 150,
     "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "4": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "rectSize": 90,
+    "offsetx": -65,
+    "offsety": 22,
+    "CornerRounds": 10,//69
+    "arcX": 22,
+    "arcY": -52,
+    "arcW": 103,
+    "arcH": 100,
+    "arcStart": 90,
+    "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "5": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "rectSize": 33,
+    "offsetx": 26,
+    "offsety": -32,
+    "CornerRounds": 10,//69
+    "arcX": -60,
+    "arcY": 16,
+    "arcW": 140,
+    "arcH": 61,
+    "arcStart": 270,
+    "arcStop": 90,
+    "boxCenterX": 50
+
   },
   "6": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "rectSize": 30,
+    "offsetx": -10,
+    "offsety": 4,
+    "CornerRounds": 10,//69
+    "arcX": -12,
+    "arcY": -14,
+    "arcW": 154,
+    "arcH": 107,
+    "arcStart": 335,
+    "arcStop": 0,
+    "boxCenterX": 50
+
   },
   "7": {
-    "size": 40,
+    "rectSize": 0,
     "offsetx": 0,
-    "offsety": 17
+    "offsety": 0,
+    "CornerRounds": 100,//69
+    "arcX": 12,
+    "arcY": -10,
+    "arcW": 147,
+    "arcH": 220,
+    "arcStart": 96,
+    "arcStop": 180,
+    "boxCenterX": 50
+
   },
   "8": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "rectSize": 25,
+    "offsetx": -10,
+    "offsety": -28,
+    "CornerRounds": 100,//69
+    "arcX": 3,
+    "arcY": 26,
+    "arcW": 25,
+    "arcH": 25,
+    "arcStart": 0,
+    "arcStop": 360,
+    "boxCenterX": 50
+
   },
   "9": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "rectSize": 30,
+    "offsetx": -12,
+    "offsety": -24,
+    "CornerRounds": 10,//69
+    "arcX": 16,
+    "arcY": 22,
+    "arcW": 154,
+    "arcH": 107,
+    "arcStart": 145,
+    "arcStop": 180,
+    "boxCenterX": 50
+
   }
 
 }
