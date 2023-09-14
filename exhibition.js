@@ -230,6 +230,9 @@ function draw () {
     var obj = computeCurrentChosenChar(i);
     drawFromDataObject(o + i*w2/8.0, o + h2/2.0 - 120, 1.0, obj)
   }
+  //draw exhibition background elemtns
+  exhibitionBackground();
+
 }
 
 function swapExhibitLetter(n, c, frameDelay) {
@@ -255,4 +258,35 @@ function keyTyped() {
     swapExhibitLetter(curChosenLetter, upper_key, 0);
     curChosenLetter = (curChosenLetter + 1) % 8;  
   }
+}
+
+function exhibitionBackground(){
+  
+  //draws background elements on exhibition canvas. Circle in each cmyk colour in all 4 corners
+  //set to multiply blend mode to create same effect as letterforms
+  push();
+  blendMode(MULTIPLY);
+  noStroke();
+  
+
+  fill(255, 255, 0, 230); //yellow
+  ellipse(-10, 510, 250, 250);
+  ellipse(1010, 470, 250, 250);
+  ellipse(940, -40, 200, 200);
+  ellipse(-50, 30, 200, 200);
+
+  fill(0,255,255, 230); //cyan
+  ellipse(20, 540, 250, 250);
+  ellipse(970, 510, 250, 250);
+  ellipse(1010, 30, 200, 200);
+  ellipse(-10, -10, 200, 200);
+
+  fill(255,0,255,230); //magenta
+  ellipse(-50, 470, 250, 250);
+  ellipse(940, 540, 250, 250);
+  ellipse(970, -10, 200, 200);
+  ellipse(20, -40, 200, 200);
+
+  pop();
+
 }

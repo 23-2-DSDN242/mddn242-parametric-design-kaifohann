@@ -4,12 +4,12 @@ const alphabet = {
     "offsetx": -2, //overlaying rectangle X position relative to center of bounding box
     "offsety": 28, //overlaying rectangle Y position relative to center of bounding box
     "CornerRounds": 100, //roundedness (radius) of corners on overlaying rectangle
-    "arcX": 0, //arc X postion relative to center of bounding box
-    "arcY": -6, //arc X postion relative to center of bounding box
-    "arcW": 45, //arc width
-    "arcH": 45, //arc height
-    "arcStart": 230, //arc start angle
-    "arcStop": 90, //arc stop angle
+    "arcX": 3, //arc X postion relative to center of bounding box
+    "arcY": 18, //arc X postion relative to center of bounding box
+    "arcW": 90, //arc width
+    "arcH": 90, //arc height
+    "arcStart": 255, //arc start angle
+    "arcStop": 285, //arc stop angle
     "boxCenterX": 50 //center of bounding box. X position of all shapes are relative to this parameter
    
   },
@@ -392,10 +392,10 @@ const alphabet = {
 
   },
   "1": {
-    "rectSize": 90,
-    "offsetx": -90,
-    "offsety": -15,
-    "CornerRounds": 20,//69
+    "rectSize": 70,
+    "offsetx": -65,
+    "offsety": 0,
+    "CornerRounds": 15,//69
     "arcX": -62,
     "arcY": -54,
     "arcW": 80,

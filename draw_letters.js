@@ -1,9 +1,9 @@
 /* these are optional special variables which will change the system */
 var systemBackgroundColor = "#FFFFFF";
+//var systemBackgroundColor = "#c2c1be";
 var systemLineColor = "#000090";
 var systemLineColor = "#000090";
 var systemBoxColor = "#999999";
-
 
 
 function drawLetter(letterData) {
@@ -72,6 +72,7 @@ function drawLetter(letterData) {
   pop();
 }
 
+
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
 
@@ -87,10 +88,10 @@ function interpolate_letter(percent, oldObj, newObj) {
   
   //if percent is below 50%:
   if (percent < 50) {
-    //move center of bounding box to 150 - this will move the base rectangle, arc and overlayed rectangle X postion during interpolation to the right
+    //move center of bounding box to 150 - this will move the base shapes, arc and overlayed rectangle X postion during interpolation to the right
     new_letter["boxCenterX"] = map(percent, 0, 49, oldObj["boxCenterX"], 150);
 
-    //shrink and close arc
+    //shrink and close arc completely
     new_letter["arcW"] = map(percent, 0, 49, oldObj["arcW"], 0);
     new_letter["arcH"] = map(percent, 0, 49, oldObj["arcH"], 0);
     new_letter["arcStart"] = map(percent, 0, 49, oldObj["arcStart"], 360);
@@ -98,10 +99,10 @@ function interpolate_letter(percent, oldObj, newObj) {
 
   //else - the percent is equal to or above 50%:
   } else {
-    //move center of bounding box from 150 back to center position - this will move the base rectangle, arc and overlayed rectangle X postion back to the left 
+    //move center of bounding box from 150 back to center position - this will move the base shapes, arc and overlayed rectangle X postion back to the left 
     new_letter["boxCenterX"] = map(percent, 50, 100, 150, newObj["boxCenterX"]);
 
-    //move arc to new obj width, height and 'openess'
+    //move arc to newObj width, height and 'openess'
     new_letter["arcW"] = map(percent, 50, 100, 0, newObj["arcW"]);
     new_letter["arcH"] = map(percent, 50, 100, 0, newObj["arcH"]);
     new_letter["arcStart"] = map(percent, 50, 100, 360, newObj["arcStart"]);
@@ -120,5 +121,6 @@ var swapWords = [
   "BOLDNESS",
   "INFINITE",
   "MINIMISE",
+  "12345678"
   
 ]
